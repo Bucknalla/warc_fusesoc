@@ -1,0 +1,4 @@
+site_name: Migen-Generator
+
+nav:
+  - Intro: "intro.md"

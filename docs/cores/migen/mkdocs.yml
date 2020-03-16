@@ -1,0 +1,4 @@
+site_name: Migen-Cores
+
+nav:
+  - Intro: "intro.md"

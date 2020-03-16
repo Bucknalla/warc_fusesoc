@@ -1,0 +1,32 @@
+CAPI=2:
+
+name : warc:hls:hls_axis_fir:0.0.1
+
+filesets:
+  rtl:
+    files:
+      - rtl/hls_axis_fir.cpp
+    file_type : hlsSource
+
+  tb:
+    files:
+      - tb/hls_axis_fir_tb.cpp
+    file_type : hlsSource
+
+  tcl:
+    files:
+      - sw/hls_axis_fir_gen.tcl
+    file_type : tclScript
+
+targets:
+  default:
+    default_tool: vivado
+    hooks:
+      pre_run: [fir_gen]
+    filesets : [rtl,tcl]
+    toplevel: [hls_axis_fir]
+
+scripts:
+  fir_gen:
+    cmd: [vivado_hls -f sw/hls_axis_fir_gen.tcl]
+    filesets: [tcl]

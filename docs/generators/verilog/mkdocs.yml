@@ -1,0 +1,4 @@
+site_name: Verilog-Generator
+
+nav:
+  - Intro: "intro.md"

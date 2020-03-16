@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb/cpp_FIR_test.cpp in debug mode
+csim.mk:78: recipe for target 'obj/cpp_FIR_test.o' failed
+In file included from ../../../../tb/../rtl/cpp_FIR.h:50:0,
+                 from ../../../../tb/cpp_FIR_test.cpp:17:
+../../../../tb/../rtl/data/cpp_FIR.inc:2:1: error: expected ‘}’ before numeric constant
+ 0.045051
+ ^~~~~~~~
+../../../../tb/../rtl/data/cpp_FIR.inc:2:1: error: expected ‘;’ before numeric constant
+In file included from ../../../../tb/cpp_FIR_test.cpp:17:0:
+../../../../tb/../rtl/cpp_FIR.h:51:1: error: expected declaration before ‘}’ token
+ };
+ ^
+make: *** [obj/cpp_FIR_test.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

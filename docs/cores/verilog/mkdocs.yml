@@ -1,0 +1,4 @@
+site_name: Verilog-Cores
+
+nav:
+  - Intro: "intro.md"

@@ -1,0 +1,47 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'alex' on host 'alex-warc' (Linux_x86_64 version 4.15.0-88-generic) on Mon Mar 16 16:14:45 GMT 2020
+INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/alex/GitHub/warc_fusesoc/hls/axis/fir'
+INFO: [HLS 200-10] Opening and resetting project '/home/alex/GitHub/warc_fusesoc/hls/axis/fir/proj_cpp_FIR'.
+INFO: [HLS 200-10] Adding design file './rtl/cpp_FIR.cpp' to the project
+INFO: [HLS 200-10] Adding design file './rtl/cpp_FIR.h' to the project
+INFO: [HLS 200-10] Adding test bench file './tb/cpp_FIR_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file './rtl/cpp_FIR.h' to the project
+INFO: [HLS 200-10] Adding test bench file './rtl/data/cpp_FIR.inc' to the project
+INFO: [HLS 200-10] Adding test bench file './tb/result.golden.dat' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/alex/GitHub/warc_fusesoc/hls/axis/fir/proj_cpp_FIR/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb/cpp_FIR_test.cpp in debug mode
+csim.mk:78: recipe for target 'obj/cpp_FIR_test.o' failed
+In file included from ../../../../tb/../rtl/cpp_FIR.h:50:0,
+                 from ../../../../tb/cpp_FIR_test.cpp:17:
+../../../../tb/../rtl/data/cpp_FIR.inc:2:1: error: expected ‘}’ before numeric constant
+ 0.045051
+ ^~~~~~~~
+../../../../tb/../rtl/data/cpp_FIR.inc:2:1: error: expected ‘;’ before numeric constant
+In file included from ../../../../tb/cpp_FIR_test.cpp:17:0:
+../../../../tb/../rtl/cpp_FIR.h:51:1: error: expected declaration before ‘}’ token
+ };
+ ^
+make: *** [obj/cpp_FIR_test.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+4
+    while executing
+"source [lindex $::argv 1] "
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 { source [lindex $::argv 1] } "
+
+INFO: [Common 17-206] Exiting vivado_hls at Mon Mar 16 16:14:46 2020...

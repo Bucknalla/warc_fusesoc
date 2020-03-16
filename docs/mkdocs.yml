@@ -1,0 +1,31 @@
+site_name: WARC Cores
+
+nav:
+  - Intro: 'index.md'
+  - Getting Started: 'getting-started.md'
+  - Cores:
+    - HLS: '!include ./cores/hls/mkdocs.yml'
+    - Migen: '!include ./cores/migen/mkdocs.yml'
+    - Verilog: '!include ./cores/verilog/mkdocs.yml'
+  - Generators:
+    - HLS: '!include ./generators/hls/mkdocs.yml'
+    - Migen: '!include ./generators/migen/mkdocs.yml'
+    - Verilog: '!include ./generators/verilog/mkdocs.yml'
+  - References: 'references.md'
+
+plugins:
+  - monorepo
+
+theme: 
+  name: material
+  palette:
+    primary: 'black'
+    accent: 'indigo'
+  logo: 'images/gear.svg'
+
+extra:
+  search:
+    language: 'en'
+
+repo_name: 'warc/cores'
+repo_url: 'https://github.com/warc/cores'

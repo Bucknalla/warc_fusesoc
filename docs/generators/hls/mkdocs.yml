@@ -1,0 +1,4 @@
+site_name: HLS-Generator
+
+nav:
+  - Intro: "intro.md"
