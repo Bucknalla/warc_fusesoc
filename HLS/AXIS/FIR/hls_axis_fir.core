@@ -1,0 +1,21 @@
+CAPI=2:
+
+name : ::hls_axis_fir:0
+filesets:
+  rtl:
+    files:
+      - rtl/hls_axis_fir.v : {file_type : verilogSource}
+
+  tb:
+    files:
+      - tb/hls_axi_fir_tb.v : {file_type : verilogSource}
+
+targets:
+  default:
+    filesets : [rtl]
+
+generators:
+  hls_axis_fir:
+    interpreter: vivado_hls
+    command: sw/hls_axis_fir_gen.tcl -f
+    description : Generate a parametrized AXI Stream arbiter
