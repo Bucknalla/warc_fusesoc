@@ -8,7 +8,11 @@ help:
 	@echo "       build & serve documentation"
 
 install:
-	python3 -m pip install -r ../requirements.txt
+	pip install -r ../requirements.txt
+	git clone https://github.com/squidfunk/mkdocs-material.git theme
+
+deploy: install
+	mkdocs gh-deploy
 
 doc: install
 	mkdocs serve

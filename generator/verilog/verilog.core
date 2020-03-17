@@ -1,0 +1,12 @@
+CAPI=2:
+
+name : warc:generators:verilog:0.0.1
+generators:
+  zynq_gen:
+    interpreter: vivado 
+    command: scripts/zynq.tcl -mode batch
+    description : Generates a generic Zynq Base Design
+  zynqmp_gen:
+    interpreter: vivado
+    command: scripts/zynqmp.tcl
+    description : Generates a generic ZynqMP Base Design

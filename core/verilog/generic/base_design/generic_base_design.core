@@ -1,0 +1,27 @@
+CAPI=2:
+
+name : warc:cores:verilog_generic_base_design:0.0.1
+filesets:
+  zybo-z7:
+    files:
+      - zybo-z7/base_design.tcl : {file_type : tclSource}
+      - zybo-z7/base.xdc : {file_type : xdc}
+
+targets:
+  default:
+    default_tool: vivado
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part: xc7z020clg400-1
+    filesets : [zybo-z7]
+    toplevel: [design_1_wrapper]
+  zybo-z7:
+    filesets : [zybo-z7]
+    toplevel: [design_1_wrapper]
+
+parameters:
+  clk_freq_hz:
+    datatype    : int
+    description : Clock frequency in Hz
+    paramtype   : vlogparam

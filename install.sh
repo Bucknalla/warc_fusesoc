@@ -13,8 +13,15 @@ fi
 if result=$(pip install fusesoc) ; then
     echo "Fusesoc installed."
     # sed -i "2s|.*|location = $work_dir|" fusesoc.conf
-    fusesoc library add warc $(pwd)
+    fusesoc library add warc $(pwd) --global
 else
     echo "Fusesoc installation failed. Check permissions."
+    exit 1
 fi
 
+if hash vivado 2>/dev/null; then
+    echo "vivado exists."
+else
+    echo "vivado not exists."
+    exit 1
+fi

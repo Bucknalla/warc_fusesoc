@@ -16,16 +16,20 @@ nav:
 plugins:
   - monorepo
 
-theme: 
-  name: material
+theme:
+  name: null
+  custom_dir: theme/material
+  language: en
   palette:
-    primary: 'black'
-    accent: 'indigo'
-  logo: 'images/gear.svg'
-
-extra:
-  search:
-    language: 'en'
+    primary: black
+    accent: black
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo:
+    icon: "layers"
+  feature:
+    tabs: true
 
 repo_name: 'warc/cores'
 repo_url: 'https://github.com/warc/cores'

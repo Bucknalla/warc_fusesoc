@@ -2,3 +2,7 @@ site_name: Verilog-Cores
 
 nav:
   - Intro: "intro.md"
+  - AXIS: "axis.md"
+  - AXI_Lite: "axi_lite.md"
+  - AXI: "axi.md"
+  - Generic: "generic.md"
