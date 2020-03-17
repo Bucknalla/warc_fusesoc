@@ -1,0 +1,16 @@
+CAPI=2:
+
+name : warc:cores:verilog_generic_blink:0
+filesets:
+  rtl:
+    files:
+      - pps.v : {file_type : verilogSource}
+
+  tb:
+    files:
+      - pps_tb.v : {file_type : verilogSource}
+
+targets:
+  sim:
+    filesets : [rtl, tb]
+    toplevel: [pps_tb]

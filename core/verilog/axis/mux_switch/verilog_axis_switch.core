@@ -1,0 +1,63 @@
+CAPI=2:
+
+name : warc:cores:verilog_axis_switch:0.0.1
+filesets:
+  rtl:
+    depend:
+      ["warc:generators:verilog:0.0.1"]
+
+  tb:
+    depend:
+      ["warc:generators:verilog:0.0.1"]
+
+targets:
+  default:
+    filesets : [rtl]
+    generate : [verilog_axis_switch]
+    toplevel: [switch]
+  sim:
+    filesets : [rtl,tb]
+    generate : [verilog_axis_switch,verilog_axis_switch_tb]
+    toplevel: [switch]
+        
+generators:
+  verilog_axis_switch_gen:
+    interpreter: python
+    command: sw/switch_gen.py
+    description : Generate an AXIS switch from input parameters
+    usage: |
+      The AXIS switch generator generates a verilog switch for toggling AXIS mux/demux cores from an AXI GPIO core using the
+      description of input ports.
+
+      Parameters:
+       Name  : name of the module (remember to adjust target:toplevel name!)
+       Ports : number of slave cores to control
+       Output: name of the output file
+
+  verilog_axis_switch_gen_tb:
+    interpreter: python
+    command: sw/switch_gen.py
+    description : Generate an AXIS switch from input parameters
+    usage: |
+      The AXIS switch generator generates a verilog switch for toggling AXIS mux/demux cores from an AXI GPIO core using the
+      description of input ports.
+
+      Parameters:
+       Name  : name of the module (remember to adjust target:toplevel name!)
+       Ports : number of slave cores to control
+       Output: name of the output file
+
+generate:
+  verilog_axis_switch:
+    generator: verilog_axis_switch_gen
+    parameters:
+      name: switch
+      ports: 8
+      output: output.v
+
+  verilog_axis_switch_tb:
+    generator: verilog_axis_switch_gen_tb
+    parameters:
+      name: blob
+      ports: 8
+      output: output_tb.v

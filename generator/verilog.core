@@ -1,0 +1,8 @@
+CAPI=2:
+
+name : warc:generators:verilog:0.0.1
+generators:
+  switch_gen:
+    interpreter: python
+    command: ../core/verilog/axis/mux_switch/sw/switch_gen.py
+    description : Generate a parametrized AXI Stream switch
